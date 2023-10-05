@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long n, uc, a = 0, x, y, p = 1;
+    
+    cin >> n >> x >> y;
+    if(n == 0 and x == 0)
+    {
+        cout << y;
+    }
+    else if(n == 0 and x != 0)
+    {
+        cout << n;
+    }
+    else if(x == y)
+    {
+        cout << n;
+    }
+    else
+    {
+    while(n > 0)
+    {
+        uc = n % 10;
+        
+        if(uc == x)
+        {
+            
+        uc = y;
+            
+        }
+        a = p * uc + a;
+        p = p * 10;
+        n /= 10;
+    }
+    
+    
+    cout << a;
+    }
+    
+    return 0;
+} 
